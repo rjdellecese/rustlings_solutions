@@ -1,3 +1,7 @@
+These are my solutions for Rustlings 1.4.1, completed with Rust 1.39.0.
+
+---
+
 ![crab pet](https://i.imgur.com/LbZJgmm.gif) 
 
 # rustlings 🦀❤️
