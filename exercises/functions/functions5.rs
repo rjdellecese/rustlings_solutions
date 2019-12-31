@@ -7,36 +7,8 @@ fn main() {
 }
 
 fn square(num: i32) -> i32 {
-    num * num;
+    num * num
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // This is a really common error that can be fixed by removing one character.
 // It happens because Rust distinguishes between expressions and statements: expressions return

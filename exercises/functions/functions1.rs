@@ -5,38 +5,9 @@ fn main() {
     call_me();
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+fn call_me() {
+    println!("I've been called!");
+}
 
 // This main function is calling a function that it expects to exist, but the
 // function doesn't exist. It expects this function to have the name `call_me`.

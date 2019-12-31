@@ -6,37 +6,12 @@
 mod tests {
     #[test]
     fn you_can_assert_eq() {
-        assert_eq!();
+        let a = 1 + 2;
+        let b = 0 + 3;
+
+        assert_eq!(a, b, "check out these values: {} and {}", a, b);
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // Like the previous exercise, you don't need to write any code to get this test to compile and
 // run. `assert_eq!` is a macro that takes two arguments and compares them. Try giving it two

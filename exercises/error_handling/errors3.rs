@@ -10,13 +10,9 @@ fn main() {
     let mut tokens = 100;
     let pretend_user_input = "8";
 
-    let cost = total_cost(pretend_user_input)?;
-
-    if cost > tokens {
-        println!("You can't afford that many!");
-    } else {
-        tokens -= cost;
-        println!("You now have {} tokens.", tokens);
+    match total_cost(pretend_user_input) {
+        Ok(cost) => transact(&cost, &mut tokens),
+        Err(_) => println!("You entered an invalid number!"),
     }
 }
 
@@ -28,22 +24,14 @@ pub fn total_cost(item_quantity: &str) -> Result<i32, ParseIntError> {
     Ok(qty * cost_per_item + processing_fee)
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+pub fn transact(cost: &i32, tokens: &mut i32) -> () {
+    if cost > tokens {
+        println!("You can't afford that many!");
+    } else {
+        *tokens -= cost;
+        println!("You now have {} tokens.", tokens);
+    }
+}
 
 // Since the `?` operator returns an `Err` early if the thing it's trying to
 // do fails, you can only use the `?` operator in functions that have a
